@@ -13,6 +13,8 @@ async function main() {
 
 main().catch((err) => console.log(err));
 
+app.use(express.urlencoded({ extended: true }))
+
 app.use('/aliens',alienRouter);
 
 app.listen(3000, () => {
